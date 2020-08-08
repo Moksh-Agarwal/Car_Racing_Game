@@ -28,14 +28,13 @@ function setup(){
   game = new Game();
   game.getState();
   game.start();
-}
 
-
-function draw(){
+  
   if(playerCount === 4){
+    gameState=1;
     game.update(1);
   }
-  if(gameState === 1){
+  if(gameState == 1){
     clear();
     game.play();
     
@@ -44,4 +43,9 @@ function draw(){
   {
     game.end();
     }
+}
+
+
+function draw(){
+  
 }
